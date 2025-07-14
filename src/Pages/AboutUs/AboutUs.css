@@ -1,0 +1,162 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #4e54c8, #8f94fb);
+  --accent-gradient: linear-gradient(135deg, #ff416c, #ff4b2b);
+  --text-light: #fff;
+  --background-dark: #121212;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+.about-wrapper {
+  background: var(--background-dark);
+  color: var(--text-light);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--accent-gradient);
+  border-radius: 20px;
+  color: #fff;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.about-hero h1 span {
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  background: #fff;
+}
+
+.about-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.about-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  background: var(--accent-gradient);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.value-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #ffd369;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #ccc;
+  opacity: 0.9;
+}
+
+/* CTA Banner */
+.about-cta {
+  background: var(--primary-gradient);
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #fff;
+  color: #4e54c8;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+
+  .about-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}

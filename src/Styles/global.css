@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import './variables.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,11 @@
+/* variables.css */
+:root {
+  --primary-gradient: linear-gradient(135deg, #4e54c8, #8f94fb);
+  --secondary-gradient: linear-gradient(135deg, #43cea2, #185a9d);
+  --accent-gradient: linear-gradient(135deg, #ff416c, #ff4b2b);
+  --dark-gradient: linear-gradient(135deg, #232526, #414345);
+
+  --text-color: #ffffff;
+  --bg-color: #121212;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}

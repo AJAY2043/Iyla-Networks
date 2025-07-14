@@ -1,0 +1,114 @@
+.team-section {
+  padding: 80px 40px;
+  background: #121212;
+  text-align: center;
+}
+
+.team-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.team-header h2 span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-header p {
+  color: #ccc;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: var(--card-bg);
+  padding: 30px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.team-card:hover {
+  background: var(--primary-gradient);
+  transform: translateY(-5px);
+}
+
+.team-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+.team-social svg {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.team-social svg:hover {
+  color: #ffd369;
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 768px) {
+  .team-section {
+    padding: 60px 20px;
+  }
+
+  .team-header h2 {
+    font-size: 2rem;
+  }
+
+  .team-image img {
+    height: 220px;
+  }
+
+  .team-card {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-image img {
+    height: 180px;
+  }
+
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .team-card p {
+    font-size: 0.95rem;
+  }
+}

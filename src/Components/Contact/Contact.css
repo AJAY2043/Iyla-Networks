@@ -1,0 +1,215 @@
+:root {
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 80px;
+
+  --primary-gradient: linear-gradient(135deg, #2b2e4a, #1e1f3b);
+  --accent-gradient: linear-gradient(135deg, #ff416c, #ff4b2b);
+
+  --text-light: #fff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* CTA Banner at Top */
+.cta-banner {
+  background: var(--accent-gradient);
+  padding: var(--spacing-lg) var(--spacing-sm);
+  text-align: center;
+  color: #fff;
+}
+
+.cta-banner h2 {
+  font-size: 2.2rem;
+  margin-bottom: var(--spacing-sm);
+  color: #fff;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #fff;
+  color: #ff416c;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Main Contact Section Styling */
+.contact-section {
+  background: #1b1f2b;
+  color: var(--text-light);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xs);
+  color: #fff;
+}
+
+.contact-header h2 span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* Layout for Info + Form */
+.contact-content {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Contact Info Card */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  background: #222439;
+  padding: var(--spacing-md);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  color: #eee;
+}
+
+.contact-info h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
+  color: #ffd369;
+}
+
+.contact-info p {
+  margin: var(--spacing-xs) 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ccc;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.contact-info svg {
+  color: #ffd369;
+  font-size: 1.1rem;
+}
+
+/* Contact Form Card */
+.contact-form {
+  flex: 2;
+  min-width: 300px;
+  background: #121212;
+  padding: var(--spacing-md);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  color: #eee;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .cta-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-btn {
+    padding: 10px 24px;
+  }
+
+  .contact-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cta-banner h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-btn {
+    font-size: 0.95rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+  }
+}
