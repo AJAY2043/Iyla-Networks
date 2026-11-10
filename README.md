@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="./assets/banner.png" alt="Iyla Networks — marketing site for a digital branding and development agency" width="100%" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-0A1024?style=flat-square&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-0A1024?style=flat-square&logo=reactrouter&logoColor=CA4245)
+![React Icons](https://img.shields.io/badge/React_Icons-0A1024?style=flat-square&logo=react&logoColor=22D3EE)
+![CSS3](https://img.shields.io/badge/CSS3-0A1024?style=flat-square&logo=css3&logoColor=1572B6)
+![Status](https://img.shields.io/badge/client_project-in_progress-7C4DFF?style=flat-square&labelColor=0A1024)
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Marketing website for **Iyla Networks**, a digital agency offering social media marketing, personal branding, and web and mobile development. The site is a pitch: who the agency is, what it does, the work it has done, and the team behind it.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Built as a six-route React site with scroll-triggered reveals and a landing page that composes every section in sequence, so a visitor can either scroll the whole story or jump to a single page.
 
-### `npm test`
+## Preview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Iyla Networks landing page](./assets/preview-home.jpg)
 
-### `npm run build`
+<sub>Screenshot captured from a local production build of this repository.</sub>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Landing page** composing Hero, About, Services, Projects, Team, Testimonials and CTA in one scroll
+- **Six routes** — `/`, `/aboutus`, `/services`, `/projects`, `/ourteam`, `/contactus` — so each section also has a page of its own
+- **Scroll-triggered reveal animations** on every section, via `react-awesome-reveal`
+- **Services, project and team sections** rendered from component-level data
+- **Testimonials** and a call-to-action block
+- **Responsive layout** across desktop, tablet and mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech stack
 
-### `npm run eject`
+| Layer | Technology |
+|---|---|
+| Framework | React (Create React App) |
+| Routing | React Router DOM — 6 routes |
+| Animation | `react-awesome-reveal` (requires `@emotion/react`) |
+| Icons | React Icons |
+| Styling | Hand-written CSS per component |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── Components/
+│   ├── LandingPage/     Composes every section in order
+│   ├── Hero/, About/, Services/, Projects/, Team/
+│   ├── Testimonials/, CTA/, Contact/
+│   ├── Navigation/      Navbar, Footer
+│   └── Animations/      Shared reveal wrappers
+├── Pages/               AboutUs, ServicesPage, ProjectsPage,
+│                        OurTeam, ContactUs
+└── App.js               6 route definitions
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/AJAY2043/Iyla-Networks.git
+cd Iyla-Networks
+npm install
+npm install @emotion/react @emotion/styled
+npm start
+```
 
-## Learn More
+> **Note the second install.** `react-awesome-reveal` needs `@emotion/react` as a peer dependency and it is missing from `package.json`. Without it, `npm run build` fails with `Module not found: Can't resolve '@emotion/react/jsx-runtime'`. Adding both to `dependencies` would fix this properly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build     # production build into ./build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Known issues
 
-### Code Splitting
+- **Missing peer dependency** — `@emotion/react` and `@emotion/styled`, as above. This is the first thing to fix.
+- **Low-contrast section heading.** The "About Us" heading renders red on a red gradient band and is effectively invisible. Worth a colour fix.
+- **Default page title.** `public/index.html` still has `<title>React App</title>` and the Create React App favicon — both should carry the Iyla Networks brand.
+- **Unused dependencies.** `framer-motion`, `react-responsive-carousel`, `react-scroll` and `react-helmet` are declared but never imported.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Future improvements
 
-### Analyzing the Bundle Size
+- Fix the items above, starting with the peer dependency
+- Wire the contact form to a delivery service so enquiries arrive
+- Add meta tags and an Open Graph image for link previews
+- Replace placeholder project and team imagery with real material
+- Accessibility pass — contrast, heading order, reduced-motion support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Author
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Ajay Krishna Reddy Bhavanam** — Melbourne, Australia
+[LinkedIn](https://linkedin.com/in/ajay-krishna-reddy) · [GitHub](https://github.com/AJAY2043)
